@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package hello;
+
+option go_package = ".;hello";
+
+service Hello1 {
+    rpc GetHello1(HelloReq) returns(HelloResp) {}
+}
+
+service Hello2 {
+    rpc GetHello2(HelloReq) returns(HelloResp) {}
+}
+
+message HelloReq {
+    string key = 1;
+    string val = 2;
+}
+message HelloResp {
+    string key = 1;
+    string val = 2;
+}
